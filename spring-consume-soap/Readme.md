@@ -27,8 +27,6 @@ When you consume a soap service, the idea is following:
             </schemaIncludes>
         </configuration>
         ```
-  * run `mvn clean compile` or `mvn clean install` to generate the stub
+* run `mvn clean compile` or `mvn clean install` to generate the stub
 
-  * after that the generated objects can be used to call soap service using `WebServiceTemplate`.
-
-
+* after that the generated objects can be used to call soap service using `WebServiceTemplate`.
