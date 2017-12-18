@@ -8,6 +8,7 @@ import javax.persistence.*;
  *
  * Created by sayeedm on 12/17/17.
  */
+@SuppressWarnings( { "SpellCheckingInspection", "unused" })
 @Entity
 @Table(name = "users")
 public class User {

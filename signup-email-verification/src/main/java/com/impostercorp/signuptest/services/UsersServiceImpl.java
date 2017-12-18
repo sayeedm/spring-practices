@@ -19,6 +19,7 @@ import java.util.Calendar;
  *
  * Created by sayeedm on 12/17/17.
  */
+@SuppressWarnings( { "SpellCheckingInspection", "unused" })
 @Service
 public class UsersServiceImpl implements UsersService {
 

@@ -10,6 +10,7 @@ import javax.validation.constraints.NotNull;
  * Signup request body
  * Created by sayeedm on 7/4/17.
  */
+@SuppressWarnings({ "unused", "SpellCheckingInspection" })
 @PasswordMatches
 public class NewUserDto {
 

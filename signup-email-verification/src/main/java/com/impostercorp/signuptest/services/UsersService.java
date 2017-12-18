@@ -10,6 +10,7 @@ import com.impostercorp.signuptest.models.User;
  *
  * Created by sayeedm on 12/17/17.
  */
+@SuppressWarnings( { "SpellCheckingInspection", "unused" })
 public interface UsersService {
     User create(NewUserDto dto) throws EmailExistsException;
     void createVerificationTokenForUser(final User user, final String token);

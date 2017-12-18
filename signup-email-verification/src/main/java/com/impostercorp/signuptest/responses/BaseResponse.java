@@ -9,6 +9,7 @@ import java.util.List;
  * TODO: convert to a simpler error response
  * Created by sayeedm on 7/4/17.
  */
+@SuppressWarnings( { "SpellCheckingInspection", "unused" })
 public class BaseResponse {
     private String message;
     private String error;

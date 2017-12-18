@@ -17,6 +17,7 @@ import java.util.List;
  *
  * Created by sayeedm on 12/18/17.
  */
+@SuppressWarnings( { "SpellCheckingInspection", "unused" })
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 
@@ -29,7 +30,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         if (user == null)
             throw new UsernameNotFoundException("no user registered with " + s);
 
-        boolean enabled = true;
+        boolean enabled = user.getEnabled();
         boolean accountNonExpired = true;
         boolean credentialsNonExpired = true;
         boolean accountNonLocked = true;

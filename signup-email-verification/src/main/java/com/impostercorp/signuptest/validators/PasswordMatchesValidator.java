@@ -10,6 +10,7 @@ import javax.validation.ConstraintValidatorContext;
  *
  * Created by sayeedm on 7/10/17.
  */
+@SuppressWarnings( { "SpellCheckingInspection", "unused" })
 public class PasswordMatchesValidator implements ConstraintValidator<PasswordMatches, Object>{
 
     @Override

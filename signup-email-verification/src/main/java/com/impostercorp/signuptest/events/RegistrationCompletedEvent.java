@@ -4,8 +4,10 @@ import com.impostercorp.signuptest.models.User;
 import org.springframework.context.ApplicationEvent;
 
 /**
+ *
  * Created by sayeedm on 12/18/17.
  */
+@SuppressWarnings( { "unused", "SpellCheckingInspection" } )
 public class RegistrationCompletedEvent extends ApplicationEvent {
 
     private User user;

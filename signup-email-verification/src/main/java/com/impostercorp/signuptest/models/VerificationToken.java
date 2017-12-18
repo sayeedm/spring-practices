@@ -9,6 +9,7 @@ import java.util.Date;
  *
  * Created by sayeedm on 12/18/17.
  */
+@SuppressWarnings( { "SpellCheckingInspection", "unused" })
 @Entity
 @Table(name = "verification_tokens")
 public class VerificationToken {

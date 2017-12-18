@@ -18,6 +18,7 @@ import javax.validation.Valid;
  *
  * Created by sayeedm on 7/4/17.
  */
+@SuppressWarnings({ "SpellCheckingInspection" })
 @RestController
 @RequestMapping("/api/users")
 public class UsersController {
@@ -25,6 +26,15 @@ public class UsersController {
     @Autowired
     private UsersService service;
 
+    /**
+     * Register a new user - create the entry and mark it as disabled, user has to verify email
+     * to enable account
+     *
+     * @param dto new user information
+     * @param result validation result of the incoming object (dto)
+     * @param request the request object - need it for verification url (context path)
+     * @return 201 or 400 or 409
+     */
     @RequestMapping(method = RequestMethod.POST, value = "/register")
     public ResponseEntity<BaseResponse> register(@RequestBody @Valid NewUserDto dto, BindingResult result, WebRequest request){
         if (!result.hasErrors()){
@@ -41,6 +51,11 @@ public class UsersController {
         }
     }
 
+    /**
+     * The verification url
+     * @param token (verification token sent via email)
+     * @return 202 or 400 or 413
+     */
     @RequestMapping(method = RequestMethod.GET, value = "/verify", params = { "token" })
     public ResponseEntity<BaseResponse> register(@RequestParam("token") String token){
         service.verifyEmail(token);

@@ -7,8 +7,18 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import java.util.Properties;
 
+/**
+ *
+ * The verify email sender configuration
+ * The values would be found on MailSenderConfig
+ *
+ * Created by sayeedm on 12/18/17.
+ *
+ */
 @Configuration
-public class MailSenderConfig{
+@SuppressWarnings( { "unused", "SpellCheckingInspection" })
+public class MailSenderConfig {
+
     @Value("${mail.server}")
     private String host;
 

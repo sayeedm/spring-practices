@@ -8,13 +8,15 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Component;
-
 import java.util.UUID;
 
 /**
+ * When a registration is being completed a event is thrown
+ * This Listener catches the event, generates a verification token and sends it via email
  *
  * Created by sayeedm on 12/18/17.
  */
+@SuppressWarnings( { "unused", "SpellCheckingInspection" } )
 @Component
 public class RegistrationCompletedEventListener implements ApplicationListener<RegistrationCompletedEvent> {
 
