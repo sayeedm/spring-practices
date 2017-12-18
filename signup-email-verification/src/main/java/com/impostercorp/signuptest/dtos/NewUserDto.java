@@ -32,6 +32,8 @@ public class NewUserDto {
     @NotEmpty
     private String email;
 
+    private String contextPath;
+
     public String getFirstName() {
         return firstName;
     }
@@ -70,5 +72,13 @@ public class NewUserDto {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getContextPath() {
+        return contextPath;
+    }
+
+    public void setContextPath(String contextPath) {
+        this.contextPath = contextPath;
     }
 }
